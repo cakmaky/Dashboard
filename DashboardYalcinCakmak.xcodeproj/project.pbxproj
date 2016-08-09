@@ -13,6 +13,7 @@
 		58EFECA51D590E1600BC5642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58EFECA41D590E1600BC5642 /* Assets.xcassets */; };
 		58EFECA81D590E1600BC5642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58EFECA61D590E1600BC5642 /* LaunchScreen.storyboard */; };
 		58EFECB31D590E1600BC5642 /* DashboardYalcinCakmakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EFECB21D590E1600BC5642 /* DashboardYalcinCakmakTests.swift */; };
+		58EFECBE1D590F8600BC5642 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EFECBD1D590F8600BC5642 /* DataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		58EFECAE1D590E1600BC5642 /* DashboardYalcinCakmakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DashboardYalcinCakmakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EFECB21D590E1600BC5642 /* DashboardYalcinCakmakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardYalcinCakmakTests.swift; sourceTree = "<group>"; };
 		58EFECB41D590E1600BC5642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58EFECBD1D590F8600BC5642 /* DataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		58EFEC911D590E1600BC5642 = {
 			isa = PBXGroup;
 			children = (
+				58EFECBD1D590F8600BC5642 /* DataFetcher.swift */,
 				58EFEC9C1D590E1600BC5642 /* DashboardYalcinCakmak */,
 				58EFECB11D590E1600BC5642 /* DashboardYalcinCakmakTests */,
 				58EFEC9B1D590E1600BC5642 /* Products */,
@@ -146,6 +149,7 @@
 				TargetAttributes = {
 					58EFEC991D590E1600BC5642 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8CRUH85QUW;
 					};
 					58EFECAD1D590E1600BC5642 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -197,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58EFECBE1D590F8600BC5642 /* DataFetcher.swift in Sources */,
 				58EFECA01D590E1600BC5642 /* ViewController.swift in Sources */,
 				58EFEC9E1D590E1600BC5642 /* AppDelegate.swift in Sources */,
 			);
@@ -329,10 +334,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DashboardYalcinCakmak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.ucsc.DashboardYalcinCakmak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -340,10 +348,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DashboardYalcinCakmak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.ucsc.DashboardYalcinCakmak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
