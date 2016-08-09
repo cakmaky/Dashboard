@@ -11,6 +11,7 @@ import Foundation
 class DataFetcher {
     
     let url: String
+    var appTitles: [String]?
     init(url : String){
         self.url = url
         
@@ -28,7 +29,9 @@ class DataFetcher {
         print(message)
     }
     func handleReceiveData(data:NSData){
-        print(String(data: data, encoding:4))
+        
+        convertDataTOJSON(data)
+        //print(String(data: data, encoding:4))
     }
     func responseHandler(data: NSData?, response:NSURLResponse?, error:NSError?){
         if let receivedError = error {
@@ -38,4 +41,57 @@ class DataFetcher {
         }
         
     }
+    func convertDataTOJSON(receivedData: NSData) {
+        
+        var jsonObject: AnyObject?
+        
+        do {
+            try jsonObject = NSJSONSerialization.JSONObjectWithData(receivedData, options: NSJSONReadingOptions.AllowFragments)
+            
+        } catch {
+            reportFailure("Error: NSJSONSerialization couldn't convert receivedData.")
+            return
+            }
+        if let dataDict = jsonObject as? NSDictionary {
+                if let entries = dataDict["feed"]?["entry"] as? [NSDictionary] {
+                    var titles = [String]()
+                    for(index, entry) in entries.enumerate() {
+                        if let title = entry["title"]?["label"] as? String {
+                            titles.append(title)
+                        } else {
+                            reportFailure("Could not get title for item \(index + 1) ")
+                        }
+                    }
+                    print(titles)
+                    appTitles = titles
+                    
+                } else {
+                    reportFailure("Entries array could not be found")
+            }
+        } else {
+            reportFailure("Error: converted JSON data is not an NSDictionary")
+            
+        }
+        
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
