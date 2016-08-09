@@ -1,26 +1,118 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ccj-3u-7ax">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Multi-tap-->
+        <scene sceneID="uY7-LN-Xx0">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DashboardYalcinCakmak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xwb-QW-LpD" customClass="ViewController" customModule="DashboardYalcinCakmak" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="YPg-8L-YHS"/>
+                        <viewControllerLayoutGuide type="bottom" id="mFJ-N3-7qc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="m6c-eO-cRj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rD7-wF-rHI">
+                                <rect key="frame" x="261" y="256" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLs-ev-oqS">
+                                <rect key="frame" x="202" y="145" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="controlActivated:" destination="Xwb-QW-LpD" eventType="touchDownRepeat" id="MLd-Wl-Tpp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rD7-wF-rHI" firstAttribute="centerY" secondItem="m6c-eO-cRj" secondAttribute="centerY" constant="-33.5" id="7Zn-20-jr3"/>
+                            <constraint firstItem="JLs-ev-oqS" firstAttribute="centerX" secondItem="m6c-eO-cRj" secondAttribute="centerX" constant="-75" id="eY6-Xn-1af"/>
+                            <constraint firstItem="rD7-wF-rHI" firstAttribute="centerX" secondItem="m6c-eO-cRj" secondAttribute="centerX" constant="-18" id="hvx-Cx-bw0"/>
+                            <constraint firstItem="JLs-ev-oqS" firstAttribute="centerY" secondItem="m6c-eO-cRj" secondAttribute="centerY" constant="-140" id="jTW-Gu-B9A"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Multi-tap" id="UMx-yQ-tKn"/>
+                    <connections>
+                        <outlet property="textDisplay" destination="rD7-wF-rHI" id="g98-QU-AWa"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTV-dz-Uro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="317" y="164"/>
+        </scene>
+        <!--Tap-->
+        <scene sceneID="GXQ-bJ-gYM">
+            <objects>
+                <viewController id="bXb-5o-eNE" customClass="ViewController" customModule="DashboardYalcinCakmak" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UGB-Jf-4sY"/>
+                        <viewControllerLayoutGuide type="bottom" id="T8i-hp-Neh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n5a-t2-syr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxe-sw-EYc">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="controlActivated:" destination="bXb-5o-eNE" eventType="touchUpInside" id="dGE-2U-QjK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x94-ka-c5b">
+                                <rect key="frame" x="279" y="289.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="x94-ka-c5b" firstAttribute="centerX" secondItem="n5a-t2-syr" secondAttribute="centerX" id="Ls6-U7-OKW"/>
+                            <constraint firstItem="Qxe-sw-EYc" firstAttribute="centerY" secondItem="n5a-t2-syr" secondAttribute="centerY" id="MiB-Mj-VsQ"/>
+                            <constraint firstItem="Qxe-sw-EYc" firstAttribute="centerX" secondItem="n5a-t2-syr" secondAttribute="centerX" id="cui-gV-eRf"/>
+                            <constraint firstItem="x94-ka-c5b" firstAttribute="centerY" secondItem="n5a-t2-syr" secondAttribute="centerY" id="xhG-c0-A0e"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tap" id="4qb-hw-PwO"/>
+                    <keyCommands>
+                        <keyCommand/>
+                    </keyCommands>
+                    <connections>
+                        <outlet property="textDisplay" destination="x94-ka-c5b" id="lTZ-sM-2K1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vV4-ZC-bt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="-497"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="P8w-lA-vMi">
+            <objects>
+                <tabBarController id="ccj-3u-7ax" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="SOw-Yg-Hak">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bXb-5o-eNE" kind="relationship" relationship="viewControllers" id="kg7-h6-z8x"/>
+                        <segue destination="Xwb-QW-LpD" kind="relationship" relationship="viewControllers" id="m1Q-zR-veX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEC-ML-KTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-503" y="-166"/>
         </scene>
     </scenes>
 </document>

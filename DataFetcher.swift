@@ -12,6 +12,25 @@ class DataFetcher {
     
     let url: String
     var appTitles: [String]?
+    private var currentTitlePosition = 0
+    var currentTitle: String {
+        if appTitles == nil || appTitles!.count == 0 {
+            return "no Data"
+        }
+        return appTitles![currentTitlePosition]
+    }
+    var nextTitle: String {
+        if appTitles == nil || appTitles!.count == 0 {
+            return "no Data"
+        }
+        currentTitlePosition += 1
+        
+        if currentTitlePosition > appTitles!.count - 1 {
+            currentTitlePosition = 0
+        }
+        return appTitles![currentTitlePosition]
+    }
+    
     init(url : String){
         self.url = url
         

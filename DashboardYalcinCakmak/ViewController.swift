@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var textDisplay: UILabel!
+    
+    @IBAction func controlActivated(control: UIControl) {
+        
+        if let appDel = UIApplication.sharedApplication().delegate as? AppDelegate {
+            self.textDisplay.text = appDel.dataFetcher?.nextTitle
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +28,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let appDel = UIApplication.sharedApplication().delegate as? AppDelegate {
+            self.textDisplay.text = appDel.dataFetcher?.currentTitle
+        }
+    }
 }
 
